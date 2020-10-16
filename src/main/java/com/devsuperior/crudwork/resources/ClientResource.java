@@ -4,26 +4,25 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.crudwork.entities.Client;
+import com.devsuperior.crudwork.services.ClientService;
 
 @RestController
 @RequestMapping(value = "/clients")
 public class ClientResource {
 	
+	@Autowired
+	private ClientService service;
+	
 	@GetMapping
 	public ResponseEntity<List<Client>> findAll() {
-		List<Client> list = new ArrayList<>();
-		list.add(new Client(1L, "Ana Clara", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
-		list.add(new Client(2L, "Humberto Gebrim", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
-		list.add(new Client(3L, "Peres Julião", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
-		list.add(new Client(4L, "Isabella Rodrigues", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
-		list.add(new Client(5L, "Pedro Xavier", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
-		list.add(new Client(6L, "Marcela de Lima", "123.456.789-00", 1000.0,Instant.parse("2017-12-25T20:30:50Z"), 2));
+		List<Client> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 

@@ -1,0 +1,6 @@
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Marcela de Lima', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Peres Julião', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 3);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Isabella Rodrigues', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 1);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Beto Carreiro', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 4);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Pedro Xavier', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 5);
+INSERT INTO tb_client(name, cpf, income, birth_date, children) VALUES ('Humberto Gebrim', '823.225.760-18', 1000.0, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2);
